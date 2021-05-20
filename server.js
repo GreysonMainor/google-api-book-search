@@ -12,9 +12,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Define API routes here
 app.use(routes);
-var MONGODB_URI = process.env.MONGODB_URI ||  "mongodb+srv://dbmain:password1998@googlebooks.nr89q.mongodb.net/test
-
-";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://dbmain:password1998@googlebooks.nr89q.mongodb.net/test";
 
 mongoose.connect(MONGODB_URI, {
   useUnifiedTopology: true,
