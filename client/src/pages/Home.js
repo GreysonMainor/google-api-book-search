@@ -34,7 +34,7 @@ class Home extends Component {
         event.preventDefault();
         this.searchBooks();
     };
-    
+
     saveGoogleBook = currentBook => {
         console.log("This is the current book", currentBook);
         API.saveBook({
@@ -60,7 +60,7 @@ class Home extends Component {
                             value={this.state.search}
                             onChange={this.handleInputChange}
                             name="search"
-                            placeholder="Search for a book"
+                            placeholder="e.g. The Hobbit"
                         />
                         <SubmitBtn onClick={this.handleFormSubmit} />
                     </form>
@@ -71,7 +71,10 @@ class Home extends Component {
                             saveGoogleBook={this.saveGoogleBook}>
                         </ResultList>
                     ) : (
-                        <h5>No results to display</h5>
+                        <div>
+                        <hr/>
+                    <p style={{fontStyle: "italic"}}>No results to display</p>
+                    </div>
                     )}
 
                 </Container>
