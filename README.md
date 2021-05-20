@@ -1,7 +1,7 @@
 # PWA-Budget-Tracker
-![Getting Started]()
-![Getting Started]()
-![Getting Started]()
+![Getting Started](client/assets/google-book-screenshot.png)
+![Getting Started](client/assets/google-book-screenshot2.png)
+![Getting Started](client/assets/google-book-screenshot3.png)
 
 
 ## Description
