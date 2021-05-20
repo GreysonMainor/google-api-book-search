@@ -1,9 +1,31 @@
 import React, { Component } from 'react'
-// eslint-disable-next-line
+import React, { Component } from 'react'
 import { Col, Row, Container } from "../components/Grid/Grid";
 import Nav from "../components/Nav/Nav";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
+import API from '../utils/API';
+import SavedList from "../components/SavedList/SavedList";
+
 class Saved extends Component {
+
+    state = {
+        savedBooks: []
+    }
+
+    componentDidMount = () => {
+        API.getBooks()
+        .then(res => {
+            this.setState({
+                savedBooks: res.data
+            })
+            console.log("This is the res from getBooks", res);
+        })
+        .catch(err => {
+            console.log("This is the error", err);
+        })
+    }
+
+
     render() {
         return (
             <div>
@@ -11,6 +33,14 @@ class Saved extends Component {
                 <Container fluid>
                 <Jumbotron />
                 Welcome to the saved page.
+                {this.state.savedBooks.length ? (
+                    <SavedList 
+                    bookState={this.state.savedBooks}
+                    >
+                    </SavedList>
+                ) : (
+                    <h5>No results to display</h5>
+                )}
                 </Container>
             </div>
         )
