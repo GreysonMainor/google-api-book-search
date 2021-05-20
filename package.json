@@ -1,9 +1,12 @@
 {
+  "homepage": "https://GreysonMainor.github.io/google-book-search",
   "name": "google-books",
   "version": "1.0.0",
   "description": "Google Books",
   "main": "server.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
@@ -21,6 +24,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.16.3",
+    "gh-pages": "^3.1.0",
     "if-env": "^1.0.4",
     "mongoose": "^5.9.1",
     "react-router-dom": "^5.2.0"
