@@ -1,4 +1,14 @@
 .jumbotron {
     box-shadow: 5px 5px 7px 0px rgba(135,135,135,0.83);
-    background-color: #fafafa;
+    background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1453&q=80");
+    background-size: cover;
+    height: 500px;
+    background-position: center;
 }
+
+/* .myText {
+    color: white;
+    font-weight: bold;
+    position: relative;
+    transform: translateY(100px)
+} */

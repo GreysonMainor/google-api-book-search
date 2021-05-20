@@ -14,6 +14,12 @@ module.exports = {
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
+    findOne: function(req, res) {
+        db.GoogleBooks
+          .findOne({id: req.params.id})
+          .then(dbModel => res.json(dbModel))
+          .catch(err => res.status(422).json(err));
+      },
     remove: function(req, res) {
       db.GoogleBooks
         .findById({ _id: req.params.id })

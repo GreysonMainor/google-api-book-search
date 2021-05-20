@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "./style.css";
 
 export function Input(props) {
     return (
@@ -10,6 +11,5 @@ export function Input(props) {
 
 export function SubmitBtn(props) {
     return (
-        <button {...props} className="btn submitBtn" style={{backgroundColor: "#2196f3", color: "white"}}>Submit</button>
-    )
+<button {...props} className="btn submitBtn" style={{backgroundColor: "#2196f3", color: "white", marginBottom: "10px"}}>Search</button>    )
 }
