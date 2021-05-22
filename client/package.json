@@ -1,4 +1,5 @@
 {
+  "homepage": "https://GreysonMainor.github.io/google-book-search",
   "name": "google-books-api-search",
   "version": "0.1.0",
   "description": "google-books-search-api",
@@ -12,6 +13,8 @@
     "react-scripts": "^2.1.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
